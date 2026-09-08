@@ -1,0 +1,2614 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺中女中 208班 ‧ 愛你未央</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* 臺中女中「綠苑制服經典色系」調色盤 */
+    :root {
+      --primary: #134b2d;          /* 經典綠苑制服深綠 */
+      --primary-dark: #0a2e1b;     /* 濃郁墨綠 */
+      --primary-light: #1f6d42;    /* 綠苑翠綠 */
+      --primary-subtle: #eaf4ee;   /* 淡雅綠苑晨霧背景 */
+      --accent: #cba153;           /* 女中校徽純金、制服金屬扣金 */
+      --accent-light: #e2bf7b;     /* 晨曦金 */
+      --accent-subtle: #fcf8ef;    /* 暖金柔和底色 */
+      --text-main: #1c2b20;        /* 沉穩深黛文字 */
+      --text-muted: #4e6354;       /* 灰綠次要文字 */
+      --bg-page: #f4f8f5;          /* 綠苑清新底色 */
+      --bg-card: #ffffff;          /* 純白卡片 */
+      --border-color: #d1e3d7;     /* 柔和綠調邊框 */
+      --shadow-sm: 0 2px 8px rgba(10, 46, 27, 0.05);
+      --shadow-md: 0 6px 20px rgba(10, 46, 27, 0.08);
+      --shadow-lg: 0 12px 32px rgba(10, 46, 27, 0.12);
+      --font-serif: 'Noto Serif TC', 'Songti TC', serif;
+      --font-sans: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* 強調黑體字風格 */
+    .motto-emphasis {
+      font-family: var(--font-sans);
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    /* Top Breaking Alert Ticker */
+    .top-ticker-bar {
+      background: #0a2e1b;
+      color: #e2eae3;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(203, 161, 83, 0.35);
+      padding: 0.5rem 1.5rem;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .ticker-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .ticker-badge {
+      background: var(--accent);
+      color: #0a2e1b;
+      font-weight: 700;
+      padding: 0.15rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .ticker-text {
+      flex: 1;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #f0f6f2;
+    }
+
+    .ticker-edit-link {
+      color: var(--accent-light);
+      font-size: 0.8rem;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+
+    .ticker-edit-link:hover {
+      color: #ffffff;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(10, 46, 27, 0.25);
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(10, 46, 27, 0.25);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: 1px;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background-color: var(--primary-subtle);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Hero Banner: 經典綠苑制服質感情境 */
+    .hero-banner {
+      background: linear-gradient(145deg, #0a2e1b 0%, #134b2d 45%, #1f6d42 100%);
+      color: #ffffff;
+      padding: 4.8rem 1.5rem 5.2rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .hero-banner::before {
+      content: "綠苑精神 ‧ 心地柔軟 ‧ 人格健全 ‧ 能動能靜 ‧ 能讀會玩";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-4deg);
+      font-family: var(--font-sans);
+      font-size: 4.2rem;
+      color: rgba(255, 255, 255, 0.05);
+      white-space: nowrap;
+      pointer-events: none;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .hero-content {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.45rem 1.3rem;
+      background: rgba(203, 161, 83, 0.25);
+      border: 1px solid var(--accent);
+      border-radius: 30px;
+      color: var(--accent-light);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3.1rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: #e4efe7;
+      font-weight: 400;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      letter-spacing: 1.5px;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: #d1ded3;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1.5rem;
+    }
+
+    .hero-meta-item strong {
+      color: var(--accent-light);
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 1280px;
+      margin: -2.5rem auto 4rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Quick Grid */
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .quick-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .quick-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .quick-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(19, 75, 45, 0.1);
+    }
+
+    .quick-card:hover .quick-icon {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .quick-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .quick-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Live Data Status Bar */
+    .live-status-bar {
+      background: var(--primary-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.65rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .live-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .live-pulse {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 0 rgba(19, 75, 45, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(19, 75, 45, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(19, 75, 45, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(19, 75, 45, 0); }
+    }
+
+    .live-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-sheet-edit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      font-size: 0.82rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-sheet-edit:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* Section Styling */
+    .section-block {
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid var(--primary-subtle);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      font-size: 1.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .section-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Filter Toolbar */
+    .filter-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tabs-nav {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 0.5rem 1.1rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-page);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      border-color: var(--primary-light);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(19, 75, 45, 0.25);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 240px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.5rem 1rem 0.5rem 2.2rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      background: #fafcfb;
+      font-size: 0.88rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(19, 75, 45, 0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Announcement Cards */
+    .announcement-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .announcement-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      background: #fafcfb;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      gap: 1rem;
+    }
+
+    .announcement-item:hover {
+      background: #ffffff;
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+
+    .ann-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+
+    .ann-header-line {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    .ann-badge {
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .badge-important { background: #ffebee; color: #c62828; }
+    .badge-academic { background: #e8f5e9; color: #1e5f39; }
+    .badge-activity { background: #e3f2fd; color: #1565c0; }
+    .badge-best { background: #fff8e1; color: #b8860b; }
+
+    .ann-tag-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--primary-subtle);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .ann-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .ann-note {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .ann-meta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+      white-space: nowrap;
+    }
+
+    .ann-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .ann-author {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* GSAT Live Countdown Banner (117 學測: 2028/01/15 - 01/17) */
+    .countdown-box {
+      background: linear-gradient(135deg, var(--accent-subtle) 0%, #fff 100%);
+      border: 1px solid var(--accent-light);
+      border-radius: 12px;
+      padding: 1.6rem 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .countdown-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .countdown-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #724e12;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .countdown-sub {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .countdown-digits {
+      display: flex;
+      gap: 0.85rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .digit-card {
+      background: #ffffff;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+      text-align: center;
+      min-width: 68px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .digit-card.sec-card {
+      border-color: var(--primary);
+    }
+
+    .digit-val {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+
+    .digit-card.sec-card .digit-val {
+      color: var(--primary);
+    }
+
+    .digit-lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+
+    /* Calendar Switcher Tabs */
+    .cal-switch-container {
+      display: flex;
+      background: var(--primary-subtle);
+      padding: 0.35rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+      gap: 0.25rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .cal-switch-btn {
+      padding: 0.55rem 1.4rem;
+      border-radius: 25px;
+      border: none;
+      background: transparent;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .cal-switch-btn.active {
+      background: #ffffff;
+      color: var(--primary-dark);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cal-view-wrapper {
+      display: none;
+    }
+
+    .cal-view-wrapper.active {
+      display: block;
+    }
+
+    .cal-action-bar {
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-light);
+      border-radius: 10px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .cal-status-title {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-weight: 700;
+      color: #724e12;
+      font-size: 0.95rem;
+    }
+
+    .cal-btn-group {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cal-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #d4b36a;
+      color: #724e12;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-cal-action:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .pdf-embed-box {
+      width: 100%;
+      height: 85vh;
+      min-height: 750px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: #525659;
+    }
+
+    .pdf-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .timetree-frame-box {
+      width: 100%;
+      height: 75vh;
+      min-height: 700px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: #ffffff;
+    }
+
+    .timetree-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .key-dates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .key-date-card {
+      background: #fafcfb;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+    }
+
+    .key-date-card.accent {
+      border-left-color: var(--accent);
+      background: #fdfdfa;
+    }
+
+    .key-date-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .key-date-val {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .key-date-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Grid Layouts for Modules */
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: #fafcfb;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .info-card:hover {
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      border-color: var(--primary-light);
+    }
+
+    .card-header-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .card-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background: var(--primary-subtle);
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .card-action-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Photo Gallery (生活剪影) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #e2eae3;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-img-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-img-element {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-img-element {
+      transform: scale(1.05);
+    }
+
+    .gallery-img-mock {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #134b2d 0%, #0a2e1b 100%);
+      color: #ffffff;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-img-mock {
+      transform: scale(1.04);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(10, 46, 27, 0.92) 0%, rgba(10, 46, 27, 0.4) 70%, transparent 100%);
+      padding: 1.2rem 1.2rem 0.85rem;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .gallery-badge {
+      font-size: 0.75rem;
+      background: rgba(203, 161, 83, 0.9);
+      color: #0a2e1b;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 0.3rem;
+    }
+
+    .gallery-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .gallery-desc {
+      font-size: 0.8rem;
+      color: #d1ded3;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Journal Cards (青春記事) */
+    .journal-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .journal-card:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .journal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .journal-badge {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      background: var(--primary-subtle);
+      color: var(--primary-dark);
+      border: 1px solid rgba(19, 75, 45, 0.15);
+    }
+
+    .journal-date {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .journal-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin: 0.4rem 0 0.5rem;
+    }
+
+    .journal-body {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .journal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed var(--border-color);
+      padding-top: 0.85rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .journal-author {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Accordion / FAQ */
+    .accordion-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .accordion-item {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: #fafcfb;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 1.2rem 1.5rem;
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .accordion-trigger:hover {
+      background: var(--primary-subtle);
+    }
+
+    .accordion-icon {
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+      color: var(--primary);
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #ffffff;
+      padding: 0 1.5rem;
+    }
+
+    .accordion-item.open .accordion-content {
+      padding: 1rem 1.5rem 1.5rem;
+      max-height: 600px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    /* Letter from Teacher: 簡潔扼要、雅致洗練風格 + 強調黑體字精神 */
+    .letter-box {
+      background: #fdfdfc;
+      border: 1px solid #e5dcc7;
+      border-left: 6px solid var(--primary);
+      border-radius: 10px;
+      padding: 2.2rem 2.5rem;
+      font-family: var(--font-serif);
+      color: #243528;
+      font-size: 1.05rem;
+      line-height: 2;
+      position: relative;
+    }
+
+    .letter-box p {
+      margin-bottom: 1.25rem;
+    }
+
+    .letter-sign {
+      text-align: right;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #0a2e1b 0%, #134b2d 100%);
+      color: #d1ded3;
+      padding: 4rem 1.5rem 2rem;
+      margin-top: 4rem;
+      border-top: 3px solid var(--accent);
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #c4d7c8;
+    }
+
+    .footer-links h4 {
+      color: var(--accent-light);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      font-family: var(--font-serif);
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #d1ded3;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ab4a1;
+      padding-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-md);
+        display: none;
+      }
+      .nav-menu.show {
+        display: flex;
+      }
+      .section-block {
+        padding: 1.5rem;
+      }
+      .countdown-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pdf-embed-box, .timetree-frame-box {
+        min-height: 520px;
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Breaking News Bar (Live from Google Sheet Column R) -->
+  <div class="top-ticker-bar" id="tickerBar">
+    <div class="ticker-inner">
+      <span class="ticker-badge">綠苑快訊</span>
+      <span class="ticker-text" id="tickerText">📢【今日提醒】每日請確實完成個人負責整潔、抬餐等班級工作；本週六9/12日舉行親師座談會！</span>
+      <a href="https://docs.google.com/spreadsheets/d/1XaM-XKC59btfhUxkumfVGAOMolCCHBe4a5CypZ4PvV8/edit" target="_blank" class="ticker-edit-link">✏️ 編輯快訊 / 倒數 ↗</a>
+    </div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/zh/7/74/NTGSH.jpg?utm_source=zh.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20110726085558" alt="臺中女中校徽圖幟" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">208班 ‧ 愛你未央</span>
+          <span class="brand-sub">TCGS CLASS 208 OFFICIAL PORTAL</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="切換選單">☰</button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#home" class="nav-link active">首頁</a></li>
+        <li class="nav-item"><a href="#announcements" class="nav-link">班級公告</a></li>
+        <li class="nav-item"><a href="#calendar" class="nav-link">雙軌行事曆</a></li>
+        <li class="nav-item"><a href="#parents" class="nav-link">家長專區</a></li>
+        <li class="nav-item"><a href="#journal" class="nav-link">青春記事</a></li>
+        <li class="nav-item"><a href="#gallery" class="nav-link">生活剪影</a></li>
+        <li class="nav-item"><a href="#self-learning" class="nav-link">自主學習</a></li>
+        <li class="nav-item"><a href="#college-prep" class="nav-link">升學進路</a></li>
+        <li class="nav-item"><a href="#resources" class="nav-link">資源分享</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner: 綠苑制服經典意象與強調黑體字核心精神 -->
+  <section class="hero-banner" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">臺中女中 ‧ 115學年度高二專屬班網</div>
+      <h1 class="hero-title">208班 ‧ 愛你未央</h1>
+      <p class="hero-subtitle">
+        深耕所愛，行而不輟；<br>
+        青春正盛，繁華未央。
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">導師：<strong>鄭雅芬 老師</strong></div>
+        <div class="hero-meta-item">班號：<strong>高二 208班</strong></div>
+        <div class="hero-meta-item">
+          帶班核心精神目標：<strong class="motto-emphasis" style="color:#ffffff; font-size:1.05rem; background:rgba(0,0,0,0.2); padding:0.2rem 0.7rem; border-radius:4px; border-bottom:2px solid var(--accent);">心地柔軟 ‧ 人格健全 ‧ 能動能靜 ‧ 能讀會玩</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Quick Navigation Grid -->
+    <div class="quick-grid">
+      <a href="#announcements" class="quick-card">
+        <div class="quick-icon">📢</div>
+        <div class="quick-info">
+          <h3>班級公告</h3>
+          <p>班務通知、各科作業與考試日程、榮譽榜 BEST 208</p>
+        </div>
+      </a>
+
+      <a href="#calendar" class="quick-card">
+        <div class="quick-icon">📅</div>
+        <div class="quick-info">
+          <h3>雙軌行事曆</h3>
+          <p>嵌入臺中女中 115學年校務行事曆與 TimeTree 班級雲端日曆</p>
+        </div>
+      </a>
+
+      <a href="#parents" class="quick-card">
+        <div class="quick-icon">🤝</div>
+        <div class="quick-info">
+          <h3>家長專區 ‧ 親師同行</h3>
+          <p>導師致家長的一封信、親師溝通理念與常見問答</p>
+        </div>
+      </a>
+
+      <a href="#journal" class="quick-card">
+        <div class="quick-icon">📝</div>
+        <div class="quick-info">
+          <h3>青春記事 (學生線上投稿)</h3>
+          <p>愛生活、愛學習、愛創作，學生隨時隨筆記錄、即時同步</p>
+        </div>
+      </a>
+
+      <a href="#gallery" class="quick-card">
+        <div class="quick-icon">🎬</div>
+        <div class="quick-info">
+          <h3>生活剪影 (活動照片上傳)</h3>
+          <p>定格日常微光、校慶與活動花絮，支援即時照片更新</p>
+        </div>
+      </a>
+
+      <a href="#self-learning" class="quick-card">
+        <div class="quick-icon">🧭</div>
+        <div class="quick-info">
+          <h3>自主學習專區</h3>
+          <p>高二計畫撰寫指引、進度檢核、成果典範觀摩</p>
+        </div>
+      </a>
+
+      <a href="#college-prep" class="quick-card">
+        <div class="quick-icon">🎯</div>
+        <div class="quick-info">
+          <h3>升學與學測專區</h3>
+          <p>學測倒數日程、十八學群探索、學習歷程檔案指引</p>
+        </div>
+      </a>
+
+      <a href="#resources" class="quick-card">
+        <div class="quick-icon">🔗</div>
+        <div class="quick-info">
+          <h3>資源分享</h3>
+          <p>國文深度閱讀、各科補充教材、競賽與表單下載</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Live Configurable Countdown Widget (117 學測: 2028/01/15 09:00 起) -->
+    <div class="countdown-box">
+      <div class="countdown-left">
+        <div class="countdown-title">
+          <span>⏳</span>
+          <span id="countdownEventTitle">距離 117學年度大學學科能力測驗 (學測) 倒數</span>
+        </div>
+        <div class="countdown-sub">
+          目標日程：<strong id="targetDateDisplay">2028-01-15 09:00:00</strong> <span style="color:var(--accent); font-weight:600;">(預計 2028/01/15 ~ 01/17 舉行)</span> ｜ <span id="countdownLiveBadge" style="color:var(--primary); font-weight:600;">每秒即時動態計算</span>
+        </div>
+      </div>
+      <div class="countdown-digits" id="countdownDigits">
+        <div class="digit-card">
+          <div class="digit-val" id="countDays">--</div>
+          <div class="digit-lbl">天 DAYS</div>
+        </div>
+        <div class="digit-card">
+          <div class="digit-val" id="countHours">--</div>
+          <div class="digit-lbl">時 HOURS</div>
+        </div>
+        <div class="digit-card">
+          <div class="digit-val" id="countMins">--</div>
+          <div class="digit-lbl">分 MINS</div>
+        </div>
+        <div class="digit-card sec-card">
+          <div class="digit-val" id="countSecs">--</div>
+          <div class="digit-lbl">秒 SECS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: 班級公告 (Live Auto-refreshing) -->
+    <section class="section-block" id="announcements">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">📢</span>
+          <div>
+            <h2 class="section-title">班級公告與學業即時通</h2>
+            <p class="section-desc">已連動 Google 試算表：每 30 秒背景自動同步最新作業、考程與班務</p>
+          </div>
+        </div>
+        <div class="live-actions">
+          <a href="https://docs.google.com/spreadsheets/d/1kBQQhwjH8Lv358IX1c-6F_wii_1Dn_JQC0kljE8KJjk/edit" target="_blank" class="btn-sheet-edit">
+            ✏️ 前往試算表登記（幹部/小老師） ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Toolbar -->
+      <div class="filter-toolbar">
+        <div class="tabs-nav" id="annTabs">
+          <button class="tab-btn active" onclick="filterAnn('all', this)">全部</button>
+          <button class="tab-btn" onclick="filterAnn('班務行政', this)">班務行政</button>
+          <button class="tab-btn" onclick="filterAnn('作業與考試', this)">作業與考試</button>
+          <button class="tab-btn" onclick="filterAnn('學校活動', this)">學校活動</button>
+          <button class="tab-btn" onclick="filterAnn('BEST 208', this)">BEST 208</button>
+        </div>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="searchInput" placeholder="搜尋公告關鍵字、科目..." oninput="searchAnnouncements(this.value)">
+        </div>
+      </div>
+
+      <!-- Announcements Container -->
+      <div class="announcement-list" id="annList">
+        <!-- Loaded dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- Section 2: 行事曆 (雙軌：嵌入台中女中官方行事曆 + 保留 TimeTree) -->
+    <section class="section-block" id="calendar">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">📅</span>
+          <div>
+            <h2 class="section-title">班級與全校行事曆 ‧ 雙軌同步</h2>
+            <p class="section-desc">整合臺中女中 115 學年度第一學期校務行事曆 與 208 班 TimeTree 雲端共享日曆</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calendar Switcher Tabs -->
+      <div class="cal-switch-container">
+        <button class="cal-switch-btn active" id="btnTabTcgs" onclick="switchCalendarTab('tcgs')">
+          🏛️ 臺中女中 115學年校務行事曆 (官方文件)
+        </button>
+        <button class="cal-switch-btn" id="btnTabTimeTree" onclick="switchCalendarTab('timetree')">
+          📅 208班 TimeTree 雲端日曆 (即時共享)
+        </button>
+      </div>
+
+      <!-- View 1: 臺中女中官方行事曆 PDF 嵌入 -->
+      <div class="cal-view-wrapper active" id="viewTcgs">
+        <div class="cal-action-bar">
+          <div class="cal-status-title">
+            <span>📄</span>
+            <span>臺中市立臺中女子高級中等學校 115 學年度第一學期行事曆（核定版）</span>
+          </div>
+          <div class="cal-btn-group">
+            <a href="https://itcgs.tcgs.tc.edu.tw/ischool/rfile/b7aab63f0dd7df80c721eaf081823cbb" target="_blank" class="btn-cal-action">
+              📥 另開全螢幕 / 下載官方 PDF ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="pdf-embed-box">
+          <iframe 
+            src="https://itcgs.tcgs.tc.edu.tw/ischool/rfile/b7aab63f0dd7df80c721eaf081823cbb#view=FitH" 
+            title="臺中女中 115學年度第一學期行事曆"
+            class="pdf-iframe">
+          </iframe>
+        </div>
+
+        <!-- Official Key Dates Quick Reference -->
+        <div class="key-dates-grid">
+          <div class="key-date-card">
+            <div class="key-date-label">第一次段考</div>
+            <div class="key-date-val">10/13 - 10/14</div>
+            <div class="key-date-note">高一至高三全校學考</div>
+          </div>
+
+          <div class="key-date-card">
+            <div class="key-date-label">第二次段考</div>
+            <div class="key-date-val">11/24 - 11/26</div>
+            <div class="key-date-note">期中定期評量</div>
+          </div>
+
+          <div class="key-date-card accent">
+            <div class="key-date-label">校慶大會與運動會</div>
+            <div class="key-date-val">12/04 (五)</div>
+            <div class="key-date-note">12/03 (四) 總預演</div>
+          </div>
+
+          <div class="key-date-card">
+            <div class="key-date-label">期末考（高一二）</div>
+            <div class="key-date-val">01/18 - 01/20</div>
+            <div class="key-date-note">01/20 (三) 全校休業式</div>
+          </div>
+
+          <div class="key-date-card accent">
+            <div class="key-date-label">大學學測 (高三)</div>
+            <div class="key-date-val">01/22 - 01/24</div>
+            <div class="key-date-note">寒假於 01/21 正式開始</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View 2: TimeTree 班級專屬日曆嵌入 -->
+      <div class="cal-view-wrapper" id="viewTimeTree">
+        <div class="cal-action-bar">
+          <div class="cal-status-title">
+            <span class="live-pulse"></span>
+            <span>208班 TimeTree 雲端行事曆（班級專屬月曆）</span>
+          </div>
+          <div class="cal-btn-group">
+            <button class="btn-cal-action" onclick="refreshTimeTreeFrame()">
+              🔄 重新整理月曆
+            </button>
+            <a href="https://timetreeapp.com/calendars/E7gn657kxxMS" target="_blank" class="btn-cal-action">
+              📱 在 TimeTree App / 網頁版中開啟 ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="timetree-frame-box">
+          <iframe 
+            id="timetreeFrame"
+            src="https://timetreeapp.com/public_calendars/E7gn657kxxMS/embed"
+            title="208班 TimeTree 行事曆"
+            class="timetree-iframe"
+            allowtransparency="true"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div style="background:#f7faf8; border:1px solid #d2e4d6; border-radius:10px; padding:1.2rem 1.5rem; margin-top:1.25rem; font-size:0.9rem; color:#264a2c; line-height:1.6;">
+          💡 <strong>親師生使用提示：</strong> 點擊「在 TimeTree App 中開啟」即可在手機 TimeTree 加入追蹤。導師或幹部在 TimeTree 上增修的個別小考、作業死線與班級任務，皆會即時同步！
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Section 3: 家長專區 ‧ 親師同行 -->
+    <section class="section-block" id="parents">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🤝</span>
+          <div>
+            <h2 class="section-title">家長專區 ‧ 親師同行</h2>
+            <p class="section-desc">「深耕所愛，行而不輟；青春正盛，繁華未央。」</p>
+          </div>
+        </div>
+        <div class="live-actions">
+          <a href="https://docs.google.com/forms/d/1IQmWeNzHPrErjje8Qk-6rSPHS-W7bBzvOHpgSOGhngI/viewform" target="_blank" class="btn-sheet-edit" style="background:var(--primary); color:#fff; border-color:var(--primary); font-weight:700;">
+            ✍️ 填寫【208 親師交流回函】表單 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- 導師致家長的一封信 (簡潔扼要、雅致洗練風格版 + 粗黑體字強調精神) -->
+      <div class="letter-box">
+        <p><strong>親愛的 208 班家長您好：</strong></p>
+        <p>
+          歡迎您的孩子來到高二 208 班。走過高一的摸索與適應，高二的孩子在心智上日漸成熟，同時也迎來學科深化、自主學習探究與大學進路探索的關鍵一年。
+        </p>
+        <p>
+          我們將班級命名為<strong>「愛你未央」</strong>（208）——聽覺上是溫暖的「愛你吧」，橫放的「8」化作象徵無限的「∞」；更揉合了微風初起的「八月未央」與漢代瓦當「長樂未央」的永恆祝願。期許孩子們在<strong>青春正盛</strong>的年華裡，能<strong>深耕所愛，行而不輟</strong>，步履堅定，<strong>繁華未央</strong>。
+        </p>
+        <p>
+          高二這一年，我和任課師長將秉持<strong class="motto-emphasis" style="color:var(--primary-dark); font-size:1.15rem; background:#eaf4ee; padding:0.15rem 0.6rem; border-radius:4px; border-bottom:2px solid var(--accent);">「心地柔軟 ‧ 人格健全 ‧ 能動能靜 ‧ 能讀會玩」</strong>的核心精神目標，陪伴孩子在學業上扎實精進，在生活裡學會包容與平衡。教育是一場親師同行的旅程，邀請您與學校攜手合作，做孩子身後最溫暖堅實的後盾！
+        </p>
+        <div class="letter-sign">
+          208 班導師 鄭雅芬 謹上
+        </div>
+      </div>
+
+      <!-- 專屬回函快捷填寫卡片 (依要求：只給表單填寫連結，移除其他多餘規劃) -->
+      <div style="background:linear-gradient(135deg, #f7faf8 0%, #ffffff 100%); border:2px solid var(--primary-light); border-radius:12px; padding:1.5rem 1.8rem; margin:2rem 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem; box-shadow:var(--shadow-sm);">
+        <div style="flex:1; min-width:280px;">
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+            <span style="font-size:1.3rem;">📋</span>
+            <h3 style="font-family:var(--font-serif); font-size:1.15rem; color:var(--primary-dark); font-weight:700; margin:0;">
+              臺中女中 208 班親師交流回函（線上填寫）
+            </h3>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6; margin:0;">
+            新學期伊始，懇請家長撥冗填寫回函問卷，協助導師深入瞭解孩子的身心健康、學習生活與各項寶貴建議。
+          </p>
+        </div>
+        <div>
+          <a href="https://docs.google.com/forms/d/1IQmWeNzHPrErjje8Qk-6rSPHS-W7bBzvOHpgSOGhngI/viewform" target="_blank" class="btn-sheet-edit" style="background:var(--primary); color:#ffffff; border-color:var(--primary); padding:0.6rem 1.4rem; font-size:0.95rem; font-weight:700; border-radius:30px; box-shadow:0 3px 10px rgba(19,75,45,0.25);">
+            ✍️ 前往填寫 Google 表單 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- 208 家長 LINE 班群與版規專區 -->
+      <div style="background:#ffffff; border:2px solid #06c755; border-radius:14px; padding:1.8rem 2rem; margin:2.2rem 0; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; border-bottom:1px solid #e0f2e6; padding-bottom:1rem; margin-bottom:1.2rem;">
+          <div style="display:flex; align-items:center; gap:0.65rem;">
+            <span style="font-size:1.6rem; color:#06c755;">💬</span>
+            <div>
+              <h3 style="font-family:var(--font-serif); font-size:1.3rem; color:#142c16; font-weight:700; margin:0;">
+                208 家長 LINE 班群 ‧ 歡迎加入
+              </h3>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.2rem;">
+                建立良好親師溝通默契，提供班級重要資訊即時公告
+              </p>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="https://line.me/R/ti/g/JCNbfY8V2D" target="_blank" class="btn-sheet-edit" style="background:#06c755; color:#ffffff; border-color:#06c755; padding:0.55rem 1.3rem; font-weight:700; border-radius:25px; box-shadow:0 3px 10px rgba(6,199,85,0.25);">
+              📲 點此一鍵加入 208 家長 LINE 群 ↗
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxmb-S8-vt6mES4mDkrDtHVqj2uS-yIrYD4l8DiLdlb31QuA/viewform" target="_blank" class="btn-sheet-edit" style="background:var(--primary); color:#ffffff; border-color:var(--primary); padding:0.55rem 1.2rem; font-weight:600; border-radius:25px;">
+              ✍️ 加入後填寫【家長 Line 實名表單】↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 家長 Line 群組 版規 卡片 -->
+        <div style="background:#f6fbf8; border:1px solid #c9e8d4; border-left:5px solid #06c755; border-radius:8px; padding:1.2rem 1.5rem; margin-bottom:1.2rem;">
+          <h4 style="color:#0f5127; font-size:1.05rem; font-weight:700; margin-bottom:0.75rem; display:flex; align-items:center; gap:0.4rem;">
+            📌「家長 LINE 群組」公約與版規
+          </h4>
+          <ol style="margin-left:1.2rem; font-size:0.92rem; color:var(--text-main); line-height:1.9;">
+            <li><strong>本群組通訊以本班親師資訊公告及資料分享為原則</strong>，勿須寒暄問候以免洗版。</li>
+            <li><strong>不在群組中談論孩子的行為和管教與涉及廣告或政治等主觀意識等議題。</strong></li>
+            <li><strong>不在群組中決議重要事項。</strong></li>
+            <li><strong>不要幫孩子在群組中問事情或請假。</strong>（請假請依學校規定依正式管道辦理）</li>
+            <li><strong>加入後，請填寫表單</strong>，以便知悉您是○○○的家長。</li>
+          </ol>
+        </div>
+
+        <!-- 身分對照實名表單提示與直達 -->
+        <div style="background:#fff; border:1px dashed #06c755; border-radius:8px; padding:1rem 1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+          <div style="font-size:0.88rem; color:var(--text-main); line-height:1.6;">
+            💡 <strong>實名登記說明</strong>：為維護群組秩序並防範陌生人混入，家長加入群組後，請點選右側按鈕填寫<strong>「學生座號、學生姓名、家長姓名、您的 LINE 顯示名稱／暱稱」</strong>，以便導師快速核對與知悉您是哪位同學的家長！
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxmb-S8-vt6mES4mDkrDtHVqj2uS-yIrYD4l8DiLdlb31QuA/viewform" target="_blank" style="color:#0f5127; font-weight:700; font-size:0.88rem; text-decoration:underline; white-space:nowrap;">
+            前往填寫實名表單 ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- 208 親師通訊 ‧ 線上閱讀專區 (已發過紙本，保留線上隨時閱讀，不規畫下載) -->
+      <div style="background:#fafcfb; border:1px solid var(--border-color); border-radius:12px; padding:1.5rem 1.8rem; margin-bottom:2rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">
+          <div style="display:flex; align-items:center; gap:0.55rem;">
+            <span style="font-size:1.3rem;">📖</span>
+            <h3 style="font-family:var(--font-serif); font-size:1.15rem; color:var(--primary-dark); font-weight:700; margin:0;">
+              208 親師通訊（開學叮嚀全文線上閱讀）
+            </h3>
+          </div>
+          <span style="font-size:0.8rem; color:var(--text-muted); background:var(--primary-subtle); padding:0.2rem 0.6rem; border-radius:4px;">
+            紙本已發送 ‧ 提供隨時線上翻閱
+          </span>
+        </div>
+
+        <!-- 4 大重點速查 (已移除手機與家中私人電話，只留公務電話與信箱) -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+          <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--primary); border-radius:8px; padding:0.9rem 1.1rem;">
+            <div style="font-weight:700; color:var(--primary-dark); font-size:0.92rem; margin-bottom:0.35rem;">
+              📞 導師公務聯繫管道
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6; margin:0;">
+              • <strong>學校公務電話</strong>：(04) 2220-5108 轉 271<br>
+              • <strong>公務電子信箱</strong>：chengyf@ms.tcgs.tc.edu.tw<br>
+              • <strong>在校空堂時間</strong>：平日 09:00 - 16:30
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--accent); border-radius:8px; padding:0.9rem 1.1rem;">
+            <div style="font-weight:700; color:#724e12; font-size:0.92rem; margin-bottom:0.35rem;">
+              ⏰ 學生作息與請假規範
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6; margin:0;">
+              • <strong>到校時間</strong>：建議每日 07:40 前到校<br>
+              • <strong>請假手續</strong>：務必依學校規定完成手續<br>
+              • <a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/17/?cid=291" target="_blank" style="color:var(--primary); text-decoration:underline;">查閱臺中女中請假與作息規定 ↗</a>
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--primary); border-radius:8px; padding:0.9rem 1.1rem;">
+            <div style="font-weight:700; color:var(--primary-dark); font-size:0.92rem; margin-bottom:0.35rem;">
+              📊 成績查詢與陪伴
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6; margin:0;">
+              • 段考與小考成績可透過 <a href="https://tcgs.tc.edu.tw/index.php" target="_blank" style="color:var(--primary); text-decoration:underline;">1Campus 智慧校園</a> 查詢。<br>
+              • 多關心孩子課業與身心調適，多鼓勵、多傾聽。
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--accent); border-radius:8px; padding:0.9rem 1.1rem;">
+            <div style="font-weight:700; color:#724e12; font-size:0.92rem; margin-bottom:0.35rem;">
+              📱 手機自律與班務透明
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6; margin:0;">
+              • 3C產品依教學需要規範，未經許可禁止使用。<br>
+              • 班費每學期末公告收支明細，養成惜福觀念。
+            </p>
+          </div>
+        </div>
+
+        <!-- 線上摺疊閱讀全文 -->
+        <details style="background:#ffffff; border:1px solid var(--border-color); border-radius:8px; padding:0.85rem 1.25rem;">
+          <summary style="font-weight:700; color:var(--primary); cursor:pointer; font-size:0.95rem; user-select:none;">
+            📄 點此展開 ‧ 隨時閱讀《208親師通訊》完整文字內容（12項叮嚀全文）▼
+          </summary>
+          <div style="margin-top:1.2rem; font-size:0.88rem; color:var(--text-main); line-height:1.85; border-top:1px dashed var(--border-color); padding-top:1rem;">
+            <p style="text-align:right; font-weight:600; color:var(--text-muted);">臺中女中 208班 2026.08.20</p>
+            <p><strong>敬愛的家長 您好：</strong></p>
+            <p>很高興能擔任您孩子的班導師，俗話說：「百年修得同船渡」，我將珍惜和她們的緣份並陪伴她們度過未來二年高中歲月，期待她們能夠養成良好的生活習慣、建立正確的人生觀及學習態度，以便未來能考上理想學校且順利進入職場與社會。未來二年，期待能和家長們一同努力，陪同孩子一起成長，共同成為孩子們生命中的貴人。為與您們建立良好的默契，共同指導孩子，以下幾點事項在此先作說明，懇請家長能夠瞭解並給予協助配合。謝謝您！</p>
+            
+            <p style="font-weight:700; color:var(--primary-dark); margin-top:1rem;">一、【親師連絡】：</p>
+            <p>1、導師的聯絡方式：教師辦公室：04-22205108轉271(國文科教研室)。如因課因事未在辦公室，您可以留言或留電，我將找時間與您聯繫。E-mail：chengyf@ms.tcgs.tc.edu.tw（請記得留下您與孩子的姓名）。建議聯繫時間：平日在校課間空堂（09:00 - 16:30）。<br>
+            2、孩子已是高中生，為培養她們獨立自主的能力，不再使用「紙本或數位聯絡簿」。如有任何意見或要事，歡迎您們透過公務電話或信箱隨時與我聯繫。</p>
+
+            <p style="font-weight:700; color:var(--primary-dark); margin-top:1rem;">二、【我需要您的協助】：</p>
+            <p>1、您的寶貝從小至今卓然出眾，經過一年的女中生活，面對比起國中更多的「英雌」，在生活與學習上也許已經調整好心態，也或許仍有莫大壓力。請您多關心孩子，盡量「以鼓勵取代批評、以傾聽取代要求、以商量取代命令」，若有特殊狀況請盡速告知導師。<br>
+            2、孩子升上高二後的第一次評量是9月1日的「暑假假期作業考」（數學、英文）。重要考試成績會公告於網上，您可透過學校「1Campus 智慧校園」查詢。請特別留意孩子在「課業」與「社團」間的平衡點，避免以分數作為衡量學習成就的唯一依據。<br>
+            3、家中經濟狀況若有特殊困難，可隨時與我聯繫，以便適時提供就學貸款、愛心便當、書籍減免與獎助學金申請協助。<br>
+            4、貴重物品請孩子盡量不要帶至學校，若需繳交費用請自行妥善保管並盡快繳交。<br>
+            5、學校規定高一每月第四週週三為重大集合活動（7:40到校），其他日到校時間為8:00，建議孩子每日盡量在7:40前到校以配合班級作息。請假應於期限內依規定完成手續。<br>
+            6、為培養孩子自律能力與面對壓力的心理韌性，懇請家長堅守立場，勿隨意同意孩子於考前請假溫書，維持學習穩定度。<br>
+            7、孩子如有違規犯錯，會依情節施以愛班或愛校服務，並適時與家長聯繫共同輔導。<br>
+            8、請協助多留意孩子的服裝儀容與作息狀況。<br>
+            9、手機等3C產品依學科教學需要規範，未經許可違規使用依校規處理。<br>
+            10、班上有時需共同支出購買班級用品（如冷氣卡等），依班會討論酌收班費，每學期末公告收支明細。<br>
+            11、暑輔期間已組建「Line班群」，手中亦有班級學生通訊錄。為防範詐騙不製作家長通訊錄，是否組建家長Line群可在親師座談會討論。<br>
+            12、本學期各班須選出2-3位班級家長代表，敬請有意願的家長踴躍在回函中表達。<br><br>
+            感謝各位家長的配合，敬祝 闔家平安 工作順利<br>
+            二年8班導師：鄭雅芬 敬上</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div style="margin-top: 1.5rem;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary-dark);">
+          ❓ 親師常見問答 (FAQ)
+        </h3>
+        <div class="accordion-group">
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Q1：學生請假手續與假單規範為何？</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>學生若因病或事請假，請家長於當日上午 08:00 前致電學務處或透過線上系統回報。返校後三日內請備妥相關就醫證明至學務處完成紙本請假流程。</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Q2：高二課業加深加廣，家長如何協助孩子調節作息？</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>建議多傾聽、少焦慮，鼓勵孩子擬定規律的每週溫書與自主學習節奏，並維持充足睡眠與運動，實踐「能讀會玩」的健康生活。</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Q3：導師最佳聯繫時間與管道？</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>若有重要事項，歡迎寄信至公務信箱 <code>chengyf@ms.tcgs.tc.edu.tw</code>，或於平日在校課間空堂（09:00 - 16:30）致電學校教研室分機聯繫（分機 271）。為保護導師家庭生活品質與防範個資外洩，不提供私人手機與住宅電話，懇請家長配合與諒解。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 青春記事 (學生線上投稿即時連動) -->
+    <section class="section-block" id="journal">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">📝</span>
+          <div>
+            <h2 class="section-title">青春記事 ‧ 208 的日常筆記</h2>
+            <p class="section-desc">同學可在線上表單/試算表隨筆投稿，每 30 秒自動同步刊登於班網！</p>
+          </div>
+        </div>
+        <div class="live-actions">
+          <a href="https://docs.google.com/spreadsheets/d/15_vzFGynxOg1hAWfND0eOkIeTkt7chSQKxdOztoWdDo/edit" target="_blank" class="btn-sheet-edit">
+            ✏️ 線上投稿 / 編輯記事 ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="filter-toolbar">
+        <div class="tabs-nav" id="journalTabs">
+          <button class="tab-btn active" onclick="filterJournal('all', this)">全部</button>
+          <button class="tab-btn" onclick="filterJournal('愛生活', this)">愛生活</button>
+          <button class="tab-btn" onclick="filterJournal('愛學習', this)">愛學習</button>
+          <button class="tab-btn" onclick="filterJournal('愛創作', this)">愛創作</button>
+          <button class="tab-btn" onclick="filterJournal('愛分享', this)">愛分享</button>
+        </div>
+      </div>
+
+      <div class="card-grid-3" id="journalList">
+        <!-- Loaded dynamically from Google Sheets U-Z columns -->
+      </div>
+    </section>
+
+    <!-- Section 5: 生活剪影 (學生相片上傳即時連動) -->
+    <section class="section-block" id="gallery">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🎬</span>
+          <div>
+            <h2 class="section-title">生活剪影 ‧ 定格綠苑微光</h2>
+            <p class="section-desc">記錄日常微光與高光時刻：學生與幹部上傳照片連結，即時更新相簿牆</p>
+          </div>
+        </div>
+        <div class="live-actions">
+          <a href="https://docs.google.com/spreadsheets/d/1ep7gVQvJlD73ki9dMyS8qGzSp2Eaf_vcSo-XUemca64/edit" target="_blank" class="btn-sheet-edit">
+            📷 上傳照片 / 編輯相簿 ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="filter-toolbar">
+        <div class="tabs-nav" id="galleryTabs">
+          <button class="tab-btn active" onclick="filterGallery('all', this)">全部</button>
+          <button class="tab-btn" onclick="filterGallery('開學日', this)">開學日</button>
+          <button class="tab-btn" onclick="filterGallery('自主學習', this)">自主學習</button>
+          <button class="tab-btn" onclick="filterGallery('校園生活', this)">校園生活</button>
+          <button class="tab-btn" onclick="filterGallery('體育活動', this)">體育活動</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Loaded dynamically from Google Sheets AB-AG columns -->
+      </div>
+    </section>
+
+    <!-- Section 6: 自主學習與專題探究 (高二核心) -->
+    <section class="section-block" id="self-learning">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🧭</span>
+          <div>
+            <h2 class="section-title">高二自主學習與專題探究</h2>
+            <p class="section-desc">從問題覺察到成果產出：引導 208 孩子規劃具備深度的自主探索歷程</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">📑</div>
+            <h4>中女自主學習計畫專區</h4>
+            <p>連動臺中女中教務處教學組官方規範：包含自主學習計畫申請時程、審查要點、18 週進度規劃表與檔案上傳規範。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/10/?cid=2800" target="_blank" class="card-action-btn">教學組自主學習專區 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">🧭</div>
+            <h4>108課綱與選課輔導攻略</h4>
+            <p>對接學校 108 課綱專區與課程計畫書：高二多元選修、加深加廣修課地圖與學習歷程檔案準備錦囊。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/119/?cid=2094" target="_blank" class="card-action-btn">中女 108 課綱專區 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">🏆</div>
+            <h4>選課手冊與各類課程計畫</h4>
+            <p>官方核定之高二開課計畫表、課程綱要與選課輔導指南，協助 208 孩子掌握學程定向與專題探究。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/10/?cid=2129" target="_blank" class="card-action-btn">中女課程計畫總覽 ➔</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: 升學進路與學測專區 (高二核心) -->
+    <section class="section-block" id="college-prep">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🎯</span>
+          <div>
+            <h2 class="section-title">升學進路與學測備戰指南</h2>
+            <p class="section-desc">提早佈局高二黃金期，掌握多元入學管道與學習歷程檔案最佳化關鍵</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">🎯</div>
+            <h4>中女升學與競賽最新資訊</h4>
+            <p>整合臺中女中官網「升學與競賽」專區：即時發布大學各入學管道簡章、英檢、數理人文校際競賽徵件日程。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/tcgs?cid=2612" target="_blank" class="card-action-btn">中女升學與競賽專區 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">📊</div>
+            <h4>中女歷年升大學錄取成果</h4>
+            <p>參考學姐在學測、繁星推薦、個人申請與分科測驗的榜單分析與錄取數據，提早定位升學目標。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/tcgs?cid=2961" target="_blank" class="card-action-btn">歷年升大學成績統計 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">🧭</div>
+            <h4>十八學群探索與大考中心</h4>
+            <p>結合 ColleGo! 大學選才系統與大考中心 (CEEC) 117學測試題趨勢，建構高二黃金期的備戰策略。</p>
+          </div>
+          <a href="https://collego.edu.tw/" target="_blank" class="card-action-btn">ColleGo! 學群探索 ➔</a>
+        </div>
+      </div>
+          <!-- 嵌入視窗：教育部大學多元入學升學網 (供親師生直接線上查詢) -->
+      <div style="margin-top: 2.2rem;">
+        <div class="cal-action-bar">
+          <div class="cal-status-title">
+            <span style="font-size:1.3rem;">🏛️</span>
+            <span>教育部大學多元入學升學網（繁星推薦 ‧ 申請入學 ‧ 分發入學 ‧ 特殊選才官方查詢系統）</span>
+          </div>
+          <div class="cal-btn-group">
+            <a href="https://nsdua.moe.edu.tw/#/" target="_blank" class="btn-cal-action" style="background:var(--primary); color:#ffffff; border-color:var(--primary); font-weight:700;">
+              🌐 另開全螢幕官網查詢 ↗
+            </a>
+          </div>
+        </div>
+
+        <div style="width:100%; height:75vh; min-height:680px; border:1px solid var(--border-color); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); background:#ffffff;">
+          <iframe 
+            src="https://nsdua.moe.edu.tw/#/" 
+            title="教育部大學多元入學升學網"
+            style="width:100%; height:100%; border:0; display:block;"
+            loading="lazy">
+          </iframe>
+        </div>
+        <div style="background:#fafcfb; border:1px solid var(--border-color); border-radius:8px; padding:0.9rem 1.25rem; margin-top:1rem; font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+          💡 <strong>親師生使用提示</strong>：提供 208 全體同學與家長直接於班網即時檢索最新大學招考制度、三大管道（繁星推薦、申請入學、分發入學）與特殊選才簡章、重要考招日程表，以及高中英聽成績檢定採計校系。若瀏覽器因安全性限制內嵌載入，可點擊上方「另開全螢幕官網查詢 ↗」直達教育部官方系統。
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: 資源分享 -->
+    <section class="section-block" id="resources">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🔗</span>
+          <div>
+            <h2 class="section-title">資源分享與常用下載</h2>
+            <p class="section-desc">學科延伸教材、語文思辨閱讀、競賽徵件與校內表單</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">📚</div>
+            <h4>臺中女中圖書館館藏與空間預約</h4>
+            <p>連動中女圖書館 WebOPAC 系統：線上借還書查詢、電子資源庫、晚自習教室/K書中心與討論空間線上預約。</p>
+          </div>
+          <a href="https://lib.tcgs.tc.edu.tw/webopac/Cxjg.aspx" target="_blank" class="card-action-btn">中女圖書館館藏查詢 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">📋</div>
+            <h4>全校課表查詢與學務規章</h4>
+            <p>直連教學組全校課表查詢系統，以及學務處生活輔導、獎懲、獎助學金與愛心便當申請要點。</p>
+          </div>
+          <a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/10/?cid=3037" target="_blank" class="card-action-btn">全校課表查詢系統 ➔</a>
+        </div>
+
+        <div class="info-card">
+          <div>
+            <div class="card-header-icon">🤝</div>
+            <h4>208 班務公開專區</h4>
+            <p>包含《親師交流回函》線上表單與親師生活叮嚀。依導師班務管理規範，<strong>「導師專區」內部資料夾維持不對外開放</strong>，僅提供適合親師生共同查閱之公開資源。</p>
+          </div>
+          <a href="https://docs.google.com/forms/d/1IQmWeNzHPrErjje8Qk-6rSPHS-W7bBzvOHpgSOGhngI/viewform" target="_blank" class="card-action-btn">親師交流回函表單 ➔</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>臺中市立臺中女子高級中等學校 ‧ 208班</h3>
+        <p>
+          班級精神：愛你未央 ‧ <strong class="motto-emphasis" style="color:#ffffff;">心地柔軟 ‧ 人格健全 ‧ 能動能靜 ‧ 能讀會玩</strong><br>
+          班級導師：鄭雅芬 老師 ｜ 國文科任課教師<br>
+          聯絡信箱：chengyf@ms.tcgs.tc.edu.tw ｜ 校址：臺中市西區自由路一段97號
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>快速導覽</h4>
+        <ul>
+          <li><a href="#home">首頁</a></li>
+          <li><a href="#announcements">班級公告</a></li>
+          <li><a href="#calendar">雙軌行事曆</a></li>
+          <li><a href="#parents">家長專區</a></li>
+          <li><a href="#journal">青春記事</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>臺中女中官方連結</h4>
+        <ul>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/" target="_blank">臺中女中全球資訊網</a></li>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/ischool/rfile/b7aab63f0dd7df80c721eaf081823cbb" target="_blank">115-1 全校行事曆 (PDF)</a></li>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/119/?cid=2094" target="_blank">中女 108 課綱專區</a></li>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/ischool/publish_page/10/?cid=2800" target="_blank">教學組自主學習專區</a></li>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/tcgs?cid=2612" target="_blank">升學與競賽最新公告</a></li>
+          <li><a href="https://itcgs.tcgs.tc.edu.tw/library" target="_blank">臺中女中圖書館官網</a></li>
+          <li><a href="https://tcgs.tc.edu.tw/index.php" target="_blank">1Campus 智慧校園系統</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 臺中女中 208班 愛你未央 班級網站 ｜ All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Real-Time Dynamic Sync & Auto-Update Engine -->
+  <script>
+    const SPREADSHEET_ID = "1T7ID1JllXC5epPsc81rAtR9Kze86iFu8IR_IEob0zUs";
+    const SHEET_GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:json`;
+
+    let targetCountdownDate = '2028-01-15 09:00:00';
+    let countdownTitle = '距離 117學年度大學學科能力測驗 (學測) 倒數';
+    let currentAnnouncements = [];
+    let currentJournals = [];
+    let currentGalleries = [];
+    
+    let activeAnnFilter = 'all';
+    let activeJournalFilter = 'all';
+    let activeGalleryFilter = 'all';
+
+    // Fallbacks
+    const defaultAnnouncements = [
+      { date: '2026/08/31', cat: '開學日', type: '學校活動', title: '115學年度第一學期正式開學、開學典禮與幹部訓練', author: '學務處', note: '正式上課，中午進行幹部訓練' },
+      { date: '2026/09/01', cat: '假期作業考', type: '學校活動', title: '【重要】數學 & 英文 假期作業考', author: '導師', note: '早自習測驗，請誠實作答' },
+      { date: '2026/09/01', cat: '班務', type: '班務行政', title: '【重要】開學幹部值勤細則與每日環境衛生認證標準', author: '風紀股長', note: '每日放學前請各排負責人完成整潔檢查' },
+      { date: '2026/09/10', cat: '國文', type: '作業與考試', title: '默寫第十三篇第4,6首', author: '國文小老師', note: '上課即考' },
+      { date: '2026/09/12', cat: '親師座談會', type: '學校活動', title: '115學年度高二親師座談會（綜合大樓禮堂與各班教室）', author: '導師', note: '班務座談，歡迎家長踴躍出席' },
+      { date: '2026/10/13', cat: '作業與考試', type: '作業與考試', title: '第一次定期學業成績評量（第1天考程）', author: '教務處', note: '依全校段考考程進行作息' },
+      { date: '2027/10', cat: 'BEST 208', type: 'BEST 208', title: '🎉 賀！本班榮獲合唱比賽冠軍！', author: '黃天晴', note: '恭喜全班同學同心協力為班級爭光！' }
+    ];
+
+    const defaultJournals = [
+      { date: '2026/09/01', cat: '愛生活', title: '高二的第一個清晨', author: '208班全體', content: '推開 208 的門，新的班級、新的黑板，窗外綠苑的陽光依舊明亮。這是我們「愛你未央」旅程的全新起點！', link: '' },
+      { date: '2026/09/03', cat: '愛學習', title: '在文學與科學的交會處', author: '國文思辨小組', content: '「不以物喜，不以己悲」是古人的修養，也是我們面對微積分與幾何時的沉穩。我們在文字與算式中尋找生命的解答。', link: '' },
+      { date: '2026/09/04', cat: '愛創作', title: '黑板一隅的粉筆詩', author: '第一排值日生', content: '值日生在黑板角落寫下今日的一句詩，讓忙碌的課表之間多了一口深呼吸的餘裕。記錄我們在綠苑的文字微光。', link: '' }
+    ];
+
+    const defaultGalleries = [
+      { date: '2026/08/31', title: '208 班級全體初見合影', cat: '開學日', imgUrl: '', desc: '開學第一天在教室門口與綠苑走廊的珍貴大合照，新學期正式啟航！', albumLink: '' },
+      { date: '2026/09/02', title: '圖書館專題檢索與小組討論', cat: '自主學習', imgUrl: '', desc: '綠苑圖書館裡的思辨時光，同學們專注查找自主學習專題資料。', albumLink: '' },
+      { date: '2026/09/04', title: '陽光下的綠苑長廊與閱讀時光', cat: '校園生活', imgUrl: '', desc: '微風吹過中庭，午後走廊上的歡笑與溫暖書香。', albumLink: '' },
+      { date: '2026/09/05', title: '排球場上的歡呼與凝聚力', cat: '體育活動', imgUrl: '', desc: '班際排球熱身賽，大家齊心協力接下每一顆球！', albumLink: '' }
+    ];
+
+    function getBadgeClass(type, cat) {
+      if (type === '班務行政' || cat === '班務') return 'badge-important';
+      if (type === '作業與考試' || cat === '國文' || cat === '數學' || cat === '英文' || cat === '物理' || cat === '化學') return 'badge-academic';
+      if (type === '學校活動' || cat === '學校活動' || cat === '開學日' || cat === '親師座談會' || cat === '假期作業考') return 'badge-activity';
+      if (type === 'BEST 208' || cat === 'BEST 208') return 'badge-best';
+      return 'badge-academic';
+    }
+
+    function renderAnnouncements(items) {
+      const container = document.getElementById('annList');
+      if (!container) return;
+      if (!items || items.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding:2rem; color:#888;">目前尚無相符的公告資料</div>';
+        return;
+      }
+      container.innerHTML = items.map(item => `
+        <div class="announcement-item" data-type="${item.type || '作業與考試'}">
+          <div class="ann-main">
+            <div class="ann-header-line">
+              <span class="ann-badge ${getBadgeClass(item.type, item.cat)}">${item.cat || '公告'}</span>
+              <span class="ann-tag-sub">${item.type || '一般'}</span>
+              <span class="ann-title">${item.title || ''}</span>
+            </div>
+            ${item.note ? `<div class="ann-note">${item.note}</div>` : ''}
+          </div>
+          <div class="ann-meta-right">
+            <span class="ann-date">${item.date || ''}</span>
+            ${item.author ? `<span class="ann-author">登記：${item.author}</span>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderJournals(items) {
+      const container = document.getElementById('journalList');
+      if (!container) return;
+      if (!items || items.length === 0) {
+        container.innerHTML = '<div style="text-align:center; grid-column: 1/-1; padding:2rem; color:#888;">目前尚無記事，歡迎點選右上角線上投稿！</div>';
+        return;
+      }
+      container.innerHTML = items.map(j => `
+        <div class="journal-card">
+          <div>
+            <div class="journal-header">
+              <span class="journal-badge">${j.cat || '青春筆記'}</span>
+              <span class="journal-date">${j.date || ''}</span>
+            </div>
+            <h4 class="journal-title">${j.title || '日常隨筆'}</h4>
+            <p class="journal-body">${j.content || ''}</p>
+          </div>
+          <div class="journal-footer">
+            <span class="journal-author">✍️ 作者：${j.author || '208同學'}</span>
+            ${j.link ? `<a href="${j.link}" target="_blank" style="color:var(--primary); font-weight:600;">閱讀全文 ➔</a>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderGalleries(items) {
+      const container = document.getElementById('galleryGrid');
+      if (!container) return;
+      if (!items || items.length === 0) {
+        container.innerHTML = '<div style="text-align:center; grid-column: 1/-1; padding:2rem; color:#888;">目前尚無照片剪影，歡迎點選右上角上傳照片！</div>';
+        return;
+      }
+      container.innerHTML = items.map(g => `
+        <div class="gallery-card" onclick="${g.albumLink ? `window.open('${g.albumLink}', '_blank')` : ''}">
+          <div class="gallery-img-container">
+            ${g.imgUrl ? 
+              `<img src="${g.imgUrl}" alt="${g.title}" class="gallery-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+               <div class="gallery-img-mock" style="display:none;">
+                 <span class="gallery-badge">${g.cat || '生活剪影'}</span>
+                 <div class="gallery-title">${g.title || '綠苑點滴'}</div>
+               </div>` : 
+              `<div class="gallery-img-mock">
+                 <span class="gallery-badge">${g.cat || '生活剪影'}</span>
+                 <div class="gallery-title">${g.title || '綠苑點滴'}</div>
+               </div>`
+            }
+            <div class="gallery-overlay">
+              <span class="gallery-badge">${g.cat || '生活剪影'}</span>
+              <div class="gallery-title">${g.title || ''}</div>
+              ${g.desc ? `<div class="gallery-desc">${g.desc}</div>` : ''}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterAnn(filterType, btnEl) {
+      activeAnnFilter = filterType;
+      document.querySelectorAll('#annTabs .tab-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      applyAnnFilters();
+    }
+
+    function searchAnnouncements(keyword) {
+      applyAnnFilters(keyword.toLowerCase().trim());
+    }
+
+    function applyAnnFilters(keyword = '') {
+      let source = currentAnnouncements.length > 0 ? currentAnnouncements : defaultAnnouncements;
+      let filtered = source;
+      if (activeAnnFilter !== 'all') {
+        filtered = filtered.filter(item => (item.type === activeAnnFilter || item.cat === activeAnnFilter));
+      }
+      if (keyword) {
+        filtered = filtered.filter(item => 
+          (item.title && item.title.toLowerCase().includes(keyword)) ||
+          (item.cat && item.cat.toLowerCase().includes(keyword)) ||
+          (item.note && item.note.toLowerCase().includes(keyword)) ||
+          (item.author && item.author.toLowerCase().includes(keyword))
+        );
+      }
+      renderAnnouncements(filtered);
+    }
+
+    function filterJournal(cat, btnEl) {
+      activeJournalFilter = cat;
+      document.querySelectorAll('#journalTabs .tab-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      let source = currentJournals.length > 0 ? currentJournals : defaultJournals;
+      if (cat === 'all') {
+        renderJournals(source);
+      } else {
+        renderJournals(source.filter(j => j.cat === cat));
+      }
+    }
+
+    function filterGallery(cat, btnEl) {
+      activeGalleryFilter = cat;
+      document.querySelectorAll('#galleryTabs .tab-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      let source = currentGalleries.length > 0 ? currentGalleries : defaultGalleries;
+      if (cat === 'all') {
+        renderGalleries(source);
+      } else {
+        renderGalleries(source.filter(g => g.cat === cat));
+      }
+    }
+
+    const SHEET_IDS = {
+      announcements: "1kBQQhwjH8Lv358IX1c-6F_wii_1Dn_JQC0kljE8KJjk",
+      journals: "15_vzFGynxOg1hAWfND0eOkIeTkt7chSQKxdOztoWdDo",
+      galleries: "1ep7gVQvJlD73ki9dMyS8qGzSp2Eaf_vcSo-XUemca64",
+      config: "1XaM-XKC59btfhUxkumfVGAOMolCCHBe4a5CypZ4PvV8",
+      backup_all: "1T7ID1JllXC5epPsc81rAtR9Kze86iFu8IR_IEob0zUs"
+    };
+
+    async function fetchLiveData(manual = false) {
+      const statusEl = document.getElementById('syncStatus');
+      if (statusEl && manual) statusEl.innerText = '正在向試算表同步最新資料...';
+
+      try {
+        const annUrl = `https://docs.google.com/spreadsheets/d/${SHEET_IDS.announcements}/gviz/tq?tqx=out:json&_t=${Date.now()}`;
+        const journalUrl = `https://docs.google.com/spreadsheets/d/${SHEET_IDS.journals}/gviz/tq?tqx=out:json&_t=${Date.now()}`;
+        const galleryUrl = `https://docs.google.com/spreadsheets/d/${SHEET_IDS.galleries}/gviz/tq?tqx=out:json&_t=${Date.now()}`;
+        const configUrl = `https://docs.google.com/spreadsheets/d/${SHEET_IDS.config}/gviz/tq?tqx=out:json&_t=${Date.now()}`;
+
+        const [annRes, journalRes, galleryRes, configRes] = await Promise.allSettled([
+          fetch(annUrl).then(r => r.text()),
+          fetch(journalUrl).then(r => r.text()),
+          fetch(galleryUrl).then(r => r.text()),
+          fetch(configUrl).then(r => r.text())
+        ]);
+
+        function parseGvizText(text) {
+          if (!text) return null;
+          const s = text.indexOf('(');
+          const e = text.lastIndexOf(')');
+          if (s === -1 || e === -1) return null;
+          try {
+            return JSON.parse(text.substring(s + 1, e));
+          } catch (e) {
+            return null;
+          }
+        }
+
+        let hasNewData = false;
+
+        // 1. Announcements
+        if (annRes.status === 'fulfilled' && annRes.value) {
+          const data = parseGvizText(annRes.value);
+          if (data && data.table && data.table.rows && data.table.rows.length > 0) {
+            const parsed = [];
+            data.table.rows.forEach(r => {
+              const c = r.c;
+              if (!c) return;
+              const d = c[0] ? (c[0].f || c[0].v || '') : '';
+              const cat = c[1] ? (c[1].f || c[1].v || '') : '';
+              const type = c[2] ? (c[2].f || c[2].v || '') : '';
+              const title = c[3] ? (c[3].f || c[3].v || '') : '';
+              const author = c[4] ? (c[4].f || c[4].v || '') : '';
+              const note = c[5] ? (c[5].f || c[5].v || '') : '';
+              if (d && d !== '日期') {
+                parsed.push({
+                  date: String(d),
+                  cat: String(cat || '公告'),
+                  type: String(type || '作業與考試'),
+                  title: String(title || cat),
+                  author: String(author || '導師'),
+                  note: String(note || '')
+                });
+              }
+            });
+            if (parsed.length > 0) {
+              currentAnnouncements = parsed;
+              applyAnnFilters();
+              hasNewData = true;
+            }
+          }
+        }
+
+        // 2. Journals
+        if (journalRes.status === 'fulfilled' && journalRes.value) {
+          const data = parseGvizText(journalRes.value);
+          if (data && data.table && data.table.rows && data.table.rows.length > 0) {
+            const parsed = [];
+            data.table.rows.forEach(r => {
+              const c = r.c;
+              if (!c) return;
+              const d = c[0] ? (c[0].f || c[0].v || '') : '';
+              const cat = c[1] ? (c[1].f || c[1].v || '') : '';
+              const title = c[2] ? (c[2].f || c[2].v || '') : '';
+              const author = c[3] ? (c[3].f || c[3].v || '') : '';
+              const content = c[4] ? (c[4].f || c[4].v || '') : '';
+              const link = c[5] ? (c[5].f || c[5].v || '') : '';
+              if ((title || content) && title !== '文章標題' && content !== '隨筆與文章內容') {
+                parsed.push({
+                  date: String(d),
+                  cat: String(cat || '愛生活'),
+                  title: String(title || '日常隨筆'),
+                  author: String(author || '208同學'),
+                  content: String(content),
+                  link: String(link || '')
+                });
+              }
+            });
+            if (parsed.length > 0) {
+              currentJournals = parsed;
+              renderJournals(currentJournals);
+              hasNewData = true;
+            }
+          }
+        }
+
+        // 3. Galleries
+        if (galleryRes.status === 'fulfilled' && galleryRes.value) {
+          const data = parseGvizText(galleryRes.value);
+          if (data && data.table && data.table.rows && data.table.rows.length > 0) {
+            const parsed = [];
+            data.table.rows.forEach(r => {
+              const c = r.c;
+              if (!c) return;
+              const d = c[0] ? (c[0].f || c[0].v || '') : '';
+              const title = c[1] ? (c[1].f || c[1].v || '') : '';
+              const cat = c[2] ? (c[2].f || c[2].v || '') : '';
+              const img = c[3] ? (c[3].f || c[3].v || '') : '';
+              const desc = c[4] ? (c[4].f || c[4].v || '') : '';
+              const album = c[5] ? (c[5].f || c[5].v || '') : '';
+              if (title && title !== '活動名稱') {
+                parsed.push({
+                  date: String(d),
+                  title: String(title),
+                  cat: String(cat || '生活剪影'),
+                  imgUrl: String(img || ''),
+                  desc: String(desc || ''),
+                  albumLink: String(album || '')
+                });
+              }
+            });
+            if (parsed.length > 0) {
+              currentGalleries = parsed;
+              renderGalleries(currentGalleries);
+              hasNewData = true;
+            }
+          }
+        }
+
+        // 4. Config
+        if (configRes.status === 'fulfilled' && configRes.value) {
+          const data = parseGvizText(configRes.value);
+          if (data && data.table && data.table.rows && data.table.rows.length > 0) {
+            data.table.rows.forEach(r => {
+              const c = r.c;
+              if (!c) return;
+              const item = c[0] ? String(c[0].v || '') : '';
+              const val = c[1] ? String(c[1].f || c[1].v || '') : '';
+              if (item.includes('倒數項目名稱') && val) countdownTitle = val;
+              if (item.includes('目標日期時間') && val) targetCountdownDate = val;
+              if (item.includes('頂部即時快訊') && val) {
+                const tickerEl = document.getElementById('tickerText');
+                if (tickerEl) tickerEl.innerText = val;
+                hasNewData = true;
+              }
+            });
+            const titleEl = document.getElementById('countdownEventTitle');
+            const dateDispEl = document.getElementById('targetDateDisplay');
+            if (titleEl) titleEl.innerText = countdownTitle;
+            if (dateDispEl) dateDispEl.innerText = targetCountdownDate;
+          }
+        }
+
+        // Automatic Failover: If new independent sheets are private, fetch from public backup sheet!
+        if (!hasNewData) {
+          const backupUrl = `https://docs.google.com/spreadsheets/d/${SHEET_IDS.backup_all}/gviz/tq?tqx=out:json&_t=${Date.now()}`;
+          const bRes = await fetch(backupUrl).then(r => r.text()).catch(e => null);
+          if (bRes) {
+            const bData = parseGvizText(bRes);
+            if (bData && bData.table && bData.table.rows) {
+              let curSec = '';
+              bData.table.rows.forEach(r => {
+                const c = r.c;
+                if (!c || !c[0] || !c[0].v) return;
+                const c0 = String(c[0].f || c[0].v || '').trim();
+                if (c0.includes('【班級公告】')) { curSec = 'ann'; return; }
+                if (c0.includes('【青春記事】')) { curSec = 'journal'; return; }
+                if (c0.includes('【生活剪影】')) { curSec = 'gallery'; return; }
+                if (c0.includes('【倒數與快訊】')) { curSec = 'config'; return; }
+                if (curSec === 'config') {
+                  const val = c[1] ? String(c[1].f || c[1].v || '') : '';
+                  if (c0.includes('倒數項目名稱') && val) countdownTitle = val;
+                  if (c0.includes('目標日期時間') && val) targetCountdownDate = val;
+                  if (c0.includes('頂部即時快訊') && val) {
+                    const tickerEl = document.getElementById('tickerText');
+                    if (tickerEl) tickerEl.innerText = val;
+                  }
+                }
+              });
+              const titleEl = document.getElementById('countdownEventTitle');
+              const dateDispEl = document.getElementById('targetDateDisplay');
+              if (titleEl) titleEl.innerText = countdownTitle;
+              if (dateDispEl) dateDispEl.innerText = targetCountdownDate;
+            }
+          }
+        }
+
+        if (statusEl) {
+          const nowTime = new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+          statusEl.innerText = `🟢 試算表已即時連動（最後同步：${nowTime}）`;
+        }
+      } catch (err) {
+        console.warn('試算表讀取回退至快取:', err);
+      }
+    }
+
+    function updateCountdown() {
+      let targetMs = Date.parse(targetCountdownDate.replace(/-/g, '/'));
+      if (isNaN(targetMs)) {
+        targetMs = new Date('2028-01-15T09:00:00+08:00').getTime();
+      }
+
+      const now = new Date().getTime();
+      const diff = targetMs - now;
+
+      const dayEl = document.getElementById('countDays');
+      const hourEl = document.getElementById('countHours');
+      const minEl = document.getElementById('countMins');
+      const secEl = document.getElementById('countSecs');
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (dayEl) dayEl.innerText = days;
+        if (hourEl) hourEl.innerText = String(hours).padStart(2, '0');
+        if (minEl) minEl.innerText = String(mins).padStart(2, '0');
+        if (secEl) secEl.innerText = String(secs).padStart(2, '0');
+      } else {
+        if (dayEl) dayEl.innerText = "0";
+        if (hourEl) hourEl.innerText = "00";
+        if (minEl) minEl.innerText = "00";
+        if (secEl) secEl.innerText = "00";
+      }
+    }
+
+    function switchCalendarTab(tabKey) {
+      const btnTcgs = document.getElementById('btnTabTcgs');
+      const btnTimeTree = document.getElementById('btnTabTimeTree');
+      const viewTcgs = document.getElementById('viewTcgs');
+      const viewTimeTree = document.getElementById('viewTimeTree');
+
+      if (tabKey === 'tcgs') {
+        btnTcgs.classList.add('active');
+        btnTimeTree.classList.remove('active');
+        viewTcgs.classList.add('active');
+        viewTimeTree.classList.remove('active');
+      } else {
+        btnTimeTree.classList.add('active');
+        btnTcgs.classList.remove('active');
+        viewTimeTree.classList.add('active');
+        viewTcgs.classList.remove('active');
+      }
+    }
+
+    function refreshTimeTreeFrame() {
+      const frame = document.getElementById('timetreeFrame');
+      if (frame) {
+        frame.src = frame.src;
+      }
+    }
+
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        trigger.parentElement.classList.toggle('open');
+      });
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+        }
+      });
+    });
+
+    // Initialize
+    currentAnnouncements = [...defaultAnnouncements];
+    currentJournals = [...defaultJournals];
+    currentGalleries = [...defaultGalleries];
+
+    applyAnnFilters();
+    renderJournals(currentJournals);
+    renderGalleries(currentGalleries);
+    updateCountdown();
+    fetchLiveData();
+
+    setInterval(updateCountdown, 1000);
+    setInterval(() => {
+      fetchLiveData();
+    }, 30000);
+  </script>
+</body>
+</html>
+
